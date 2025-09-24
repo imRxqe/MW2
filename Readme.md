@@ -1,3 +1,11 @@
+# Remeber stuff:
+* g_scr.h which i added to this repo contains meansOfDeath_t
+* client.h contains indexes for throwingknife offhand
+* structs.h contains grenadetimes etc
+
+# Ideas:
+* Decrypt known sprx files and compare functions, how they looked decompiled vs source
+
 \# Overview Exploits/CVE
 
 * Known CVEs:
