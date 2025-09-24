@@ -1,3 +1,7 @@
+# Next Todo:
+* Make a non-host menu base to be able to test sending udp packet from client to host 
+* This should apply to joinparty and the ReadBitsCompressed i guess
+
 # Remeber stuff:
 * g_scr.h which i added to this repo contains meansOfDeath_t
 * client.h contains indexes for throwingknife offhand
@@ -5,12 +9,14 @@
 
 # Ideas:
 * Decrypt known sprx files and compare functions, how they looked decompiled vs source
+* Compare functions with quake III Source
+* Run python server on pc and connect to it from sprx, send data to it, use as service etc.
 
 \# Overview Exploits/CVE
 
 * Known CVEs:
 
-> CVE-2018-10718 --> ExecuteClientMessage/ReadBitsCompressed (Sabotage, Momo5502 writeup)
+> CVE-2018-10718 --> ExecuteClientMessage/ReadBitsCompressed (Sabotage, Momo5502 writeup) => Just send connectionless udp package
 
 > CVE-2019-20893 --> PartyHost\_HandleJoinPartyRequest (BlastsMods)
 
