@@ -1,14 +1,42 @@
 \# Overview Exploits/CVE
 
-* MSG\_ReadBitsCompressed (by Sabotage), same as described by Momo5502 (Huffman), resides inside SV\_ExecuteClientMessage
+* Known CVEs:
 
->"In the function SV\_ExecuteClientMessage, the length of the
+> CVE-2018-10718 --> ExecuteClientMessage/ReadBitsCompressed (Sabotage, Momo5502 writeup)
 
->compressed data is not checked to be smaller than the
+> CVE-2019-20893 --> PartyHost\_HandleJoinPartyRequest (BlastsMods)
 
->allocated buffer on the stack before the call to MSG\_ReadBitsCompress.
+> CVE-2018-20817 --> SV\_SteamAuthClient 
 
->Overflowing the buffer using a modified client message
+> Unknown --> ?
 
->enables arbitrary code execution"
+
+
+\# Netchan API
+
+* Netchan\_Transmit / Netchan\_SendPacket
+* void CL\_Netchan\_Transmit( netchan\_t \*chan, msg\_t\* msg);	//int length, const byte \*data );
+
+location of netchan string: 0x00569fa1
+
+
+
+\# JoinParty
+
+* Search for joinparty in the binary, you find some strings atleast
+
+
+
+\# Souls RCE v2
+
+Hooked functions:
+  HookFunctionStart(0xdb918,PTR\_LAB\_0001d008,PTR\_FUN\_0001cfe0);
+
+&nbsp; HookFunctionStart(0x50f7c4,PTR\_LAB\_0001d010,PTR\_LAB\_0001cfe8);
+
+&nbsp; HookFunctionStart(0xaf978,PTR\_LAB\_0001d018,PTR\_FUN\_0001cff0);
+
+&nbsp; HookFunctionStart(0x50f344,PTR\_LAB\_0001d020,PTR\_FUN\_0001cff8);
+
+&nbsp; HookFunctionStart(0x23a138,PTR\_containsKillswitch\_0001d028,PTR\_5thFuncKillswitchStub\_0001d000);
 
