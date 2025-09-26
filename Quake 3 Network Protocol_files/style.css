@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Source+Code+Pro:400,700&display=swap');
+@import "bootstrap.min.css";
+
+body {
+    padding-bottom: 10rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.protofield {
+    font-weight: bold;
+}
+
+h1 {
+    padding-top: 2rem;
+}
+
+pre {
+    line-height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        padding-top: 4rem;
+    }
+    
+    .abstract {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        padding-top: 10rem;
+        padding-bottom: 1rem;
+    }
+    .abstract {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    body {
+    }
+}
+
+@media print {
+    body {
+        font-size: 9pt;
+        padding-bottom: 0;
+        color: black;
+    }
+    @page
+    {
+        margin-left: 3cm;
+        margin-right: 3cm;
+        margin-top: 2cm;
+        margin-bottom: 2cm;
+    }
+    h2 {
+        font-size: 12pt;
+    }
+    .abstract {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    pre {
+        line-height: 0.8rem;
+    }
+}
